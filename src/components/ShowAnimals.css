@@ -1,0 +1,25 @@
+.animals {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.animals .animal-container {
+    justify-content: center;
+    width: 30%;
+    align-items: center;
+}
+
+.animals .animal-container .img-container {
+    width: 50%;
+}
+
+.animals .animal-container .short-descript {
+    width: 60%;
+    text-align: center;
+}
+
+.animals .animal-container .img-container img {
+    width: 100%;
+}

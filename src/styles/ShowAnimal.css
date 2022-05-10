@@ -1,0 +1,18 @@
+.detailed-info-container .detailed-info {
+    display: flex;
+    flex-direction: row;
+}
+
+.detailed-info-container .detailed-info img {
+    max-width: 30%;
+}
+
+.detailed-info-container .detailed-info section {
+    padding-right: 5rem;
+    padding-left: 5rem;
+}
+
+.detailed-info-container .detailed-info textarea {
+    height: auto;
+    width: 35rem;
+}

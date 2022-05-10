@@ -1,0 +1,39 @@
+.layout {
+    width: 100%;
+}
+
+.layout header {
+    height: 75px;
+    background-color: #90EE90;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-size: larger;
+}
+
+.layout section {
+    display: flex;
+}
+
+.layout aside {
+    width: 20%;
+    min-height: 80vh;
+    background-color: #C4A484;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.layout main {
+    width: 80%;
+    background-color: #F0EAD6;
+}
+
+.layout footer {
+    height: 100px;
+    background-color: burlywood;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

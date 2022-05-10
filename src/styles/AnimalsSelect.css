@@ -1,0 +1,21 @@
+.menu-container {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.menu-container a {
+    display: flex;
+    flex-direction: column;
+    width: 25%;
+    align-items: center;
+}
+
+.menu-container a img {
+    max-width: 50%;
+}
+
+.menu-container a h5 {
+    text-align: center;
+}

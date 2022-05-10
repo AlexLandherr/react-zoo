@@ -1,7 +1,6 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
 import { IAnimals } from "../models/IAnimals";
-import "./ShowAnimals.css";
 
 export function GetAnimals() {
     const [animals, setAnimals] = useState<IAnimals[]>([]);//Skapar state för att lagra data från API:et.
@@ -22,9 +21,13 @@ export function GetAnimals() {
             });
     };
 
+    //Lagrar datan från API:et i localStorage.
+    let animalsAsText = JSON.stringify(animals);
+    localStorage.setItem("animalsList", animalsAsText);
+
     //animalsHtmlList håller en lista/array med JSX-element som beskriver hur info från
     //API:et ska visas i webbläsaren. (Temporärt!!!)
-    let animalsHtmlList = animals.map((animal) => {
+/*     let animalsHtmlList = animals.map((animal) => {
         return (<div key={animal.id} className="animal-container">
             <h3>{animal.name} - ({animal.yearOfBirth})</h3>
             <div className="img-container">
@@ -32,7 +35,5 @@ export function GetAnimals() {
             </div>
             <div className="short-descript">{animal.shortDescription}</div>
         </div>)
-    })
-
-    return (animalsHtmlList)
+    }) */
 };

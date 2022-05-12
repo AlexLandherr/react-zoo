@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import { IAnimals } from "../models/IAnimals";
 import "./../styles/ShowAnimal.css";
+import { feedAlertIntervalLow } from "./feedAlertIntervals";
 import { handleClick } from "./handleClick";
 
 export const ShowAnimal = () => {
@@ -30,7 +31,6 @@ export const ShowAnimal = () => {
   let milliSecs = Date.parse(lastFedTS);
   let currentTime = new Date();
   let currentMilliSecs = currentTime.getTime();
-  const feedAlertTimePassed = 10800000;
   let timePassed = currentMilliSecs - milliSecs; //Triggers at 10800000 milliseconds.
 
   feedStatus = (
@@ -53,7 +53,7 @@ export const ShowAnimal = () => {
           </section>
           <textarea value={animal.longDescription} readOnly></textarea>
         </div>
-        { timePassed >= feedAlertTimePassed ?  (
+        { timePassed >= feedAlertIntervalLow ?  (
             <button
               onClick={() => {
                 setAnimal(handleClick(animal, Number(params.id)));

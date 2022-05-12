@@ -25,6 +25,7 @@ export function handleClick(animalObject: IAnimals, animalID: number): IAnimals 
     localStorage.setItem("animalsList", animalsAsText);
     console.log(animalsAsText);
     
-    //return animal obj.
+    //return animal obj and reloads page to show when animal was last fed.
+    window.location.reload();
     return (animalObject);
 };

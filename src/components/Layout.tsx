@@ -1,5 +1,6 @@
-import { Outlet } from "react-router-dom";
+import { Link, Outlet } from "react-router-dom";
 import "./../styles/Layout.css";
+import { hasMoreThanFourHoursPassed } from "./moreThanFourHours";
 
 export const Layout = () => {
     return (
@@ -8,12 +9,17 @@ export const Layout = () => {
           React Zoo
       </header>
       <section>
-        <aside>aside</aside>
+        <aside>
+          <ul>
+            <li><Link to="/">Home</Link></li>
+            <li><Link to="/animals">Animals Menu</Link></li>
+          </ul>
+        </aside>
         <main>
           <Outlet/>
         </main>
       </section>
-      <footer>footer</footer>
+      <footer>{hasMoreThanFourHoursPassed()}</footer>
     </div>
     );
 };

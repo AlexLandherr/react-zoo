@@ -1,8 +1,7 @@
-import "./../styles/Home.css";
+import { StyledHomePage } from "./StyledHomePage";
 
 export const Home = () => {
     return (<>
-        <div className="container">Home
-        </div>
+        <StyledHomePage>Welcome to React Zoo!</StyledHomePage>
     </>);
 };

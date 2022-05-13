@@ -25,15 +25,28 @@
     align-items: center;
 }
 
+.layout aside ul {
+    list-style: none;
+}
+
+.layout aside ul li a {
+    display: flex;
+    justify-content: space-between;
+    font-size: large;
+}
+
 .layout main {
     width: 80%;
     background-color: #F0EAD6;
 }
 
 .layout footer {
-    height: 100px;
+    min-height: 100px;
     background-color: burlywood;
     display: flex;
-    justify-content: center;
-    align-items: center;
+    flex-wrap: wrap;
+}
+
+.layout footer a p {
+    font-size: medium;
 }

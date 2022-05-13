@@ -22,6 +22,7 @@ export const AnimalsSelect = () => {
                 <Link key={animal.id} to={"/animal/" + animal.id}>
                     <h5>{animal.name}</h5>
                     <img src={animal.imageUrl} alt={animal.name}/>
+                    <textarea value={animal.shortDescription}></textarea>
                 </Link>
             );
         })}
